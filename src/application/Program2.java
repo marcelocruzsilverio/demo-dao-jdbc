@@ -30,12 +30,17 @@ public class Program2 {
 //        departmentDao.update(department1);
 //        System.out.println("Update completed!");
 
-        System.out.println("\n=== TEST 3: department findAll ===");
+        System.out.println("\n=== TEST 4: department findAll ===");
         List<Department> list = departmentDao.findAll();
         for (Department department2 : list) {
             System.out.println(department2);
         }
 
+        System.out.println("\n=== TEST 5: department delete ===");
+        System.out.println("Enter id to delete: ");
+        int id = sc.nextInt();
+        departmentDao.deleteById(id);
+        System.out.println("Delete completed!");
 
 
 
